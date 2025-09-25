@@ -1,13 +1,10 @@
-import { CommonModule } from '@angular/common';
-import { FormsModule, NgForm } from "@angular/forms";
 import { Component, inject, signal } from '@angular/core';
-import { EmployeeService } from './../../../shared-lib/src/lib/employee-service';
+import { FormsModule, NgForm } from '@angular/forms';
+import { EmployeeService } from '@personal-manager/shared-lib';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    FormsModule,
-  ],
+  imports: [FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -35,5 +32,4 @@ export class App {
     this.firstName.set('')
     form.resetForm()
   }
-
 }

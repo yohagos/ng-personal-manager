@@ -1,8 +1,12 @@
-<h2>Add Employee</h2>
+<div class="container">
+  <h2>Add Employee</h2>
 
-<form #form="ngForm" (ngSubmit)="add(form)">
-  <input [(ngModel)]="firstName" type="text" name="firstName" placeholder="First Name">
-  <input [(ngModel)]="lastName" type="text" name="lastName" placeholder="Last Name">
-  <input [(ngModel)]="email" type="email" name="email" placeholder="Email">
-  <button type="submit">Add</button>
-</form>
+  <form #form="ngForm" (ngSubmit)="add(form)">
+    <input [(ngModel)]="firstName" type="text" name="firstName" placeholder="First Name">
+    <input [(ngModel)]="lastName" type="text" name="lastName" placeholder="Last Name">
+    <input [(ngModel)]="email" type="email" name="email" placeholder="Email">
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+
