@@ -1,9 +1,11 @@
 const { withNativeFederation, shareAll } = require('@angular-architects/native-federation/config');
 
 module.exports = withNativeFederation({
+
   name: 'mfe-employee-list',
+
   exposes: {
-    './Component': './src/app/app.ts',
+    './Component': './projects/mfe-employee-list/src/app/app.ts',
   },
 
   shared: {
@@ -11,7 +13,7 @@ module.exports = withNativeFederation({
     '@personal-manager/shared-lib': {
       singleton: true,
       strictVersion: true,
-      requiredVersion: '0.0.1'
+      requiredVersion: 'auto'
     }
   },
 
@@ -20,9 +22,16 @@ module.exports = withNativeFederation({
     'rxjs/fetch',
     'rxjs/testing',
     'rxjs/webSocket',
+    // Add further packages you don't need at runtime
   ],
 
+  // Please read our FAQ about sharing libs:
+  // https://shorturl.at/jmzH0
+
   features: {
+    // New feature for more performance and avoiding
+    // issues with node libs. Comment this out to
+    // get the traditional behavior:
     ignoreUnusedDeps: true
   }
 

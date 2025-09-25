@@ -58,6 +58,12 @@
     },
     {
       "path": "./projects/shared-lib/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe-employee-list/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe-employee-list/tsconfig.spec.json"
     }
   ]
 }
