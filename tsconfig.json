@@ -64,6 +64,18 @@
     },
     {
       "path": "./projects/mfe-employee-list/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe-employee-add/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe-employee-add/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe-employee-deactivate/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe-employee-deactivate/tsconfig.spec.json"
     }
   ]
 }
