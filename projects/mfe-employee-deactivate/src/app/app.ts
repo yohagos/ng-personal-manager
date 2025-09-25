@@ -1,6 +1,5 @@
 import { Component, computed, inject, signal } from '@angular/core';
-import { EmployeeService } from "./../../../shared-lib/src/lib/employee-service";
-import { Employee } from '../../../shared-lib/src/lib/employee.model';
+import { Employee, EmployeeService } from '@personal-manager/shared-lib';
 
 @Component({
   selector: 'app-root',
