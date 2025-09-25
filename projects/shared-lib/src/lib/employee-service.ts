@@ -5,7 +5,46 @@ import { Employee } from './employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private employees = signal<Employee[]>([])
+  mockData: Employee[] = [
+  {
+    id: 1,
+    firstName: 'Test',
+    lastName: 'Test',
+    email: 'test@test.test',
+    activate: true,
+  },
+  {
+    id: 2,
+    firstName: 'User',
+    lastName: 'User',
+    email: 'user@user.user',
+    activate: true,
+  },
+  {
+    id: 3,
+    firstName: 'xyz',
+    lastName: 'xyz',
+    email: 'xyz@xyz.xyz',
+    activate: true,
+  },
+  {
+    id: 4,
+    firstName: 'abc',
+    lastName: 'abc',
+    email: 'abc@abc.abc',
+    activate: true,
+  },
+  {
+    id: 5,
+    firstName: 'def',
+    lastName: 'def',
+    email: 'def@def.def',
+    activate: true,
+  },
+]
+
+  private employees = signal<Employee[]>(this.mockData)
+
   get_employees = computed(() => this.employees())
 
   addEmployee(

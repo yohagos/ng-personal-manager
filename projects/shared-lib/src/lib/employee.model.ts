@@ -5,4 +5,3 @@ export interface Employee {
   email: string;
   activate: boolean;
 }
-
