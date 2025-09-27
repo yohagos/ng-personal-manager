@@ -11,4 +11,9 @@ export class App {
   private employeeService = inject(EmployeeService)
 
   employees = computed(() => this.employeeService.get_employees())
+
+  deactivateEmployeeById(id: number) {
+    this.employeeService.deactivateEmployee(id)
+    this.employees = computed(() => this.employeeService.get_employees())
+  }
 }

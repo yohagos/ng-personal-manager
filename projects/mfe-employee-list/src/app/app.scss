@@ -1,0 +1,31 @@
+table {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 4em auto;
+
+  th[scope=col] {
+    width: 110px;
+    border-left: 2px solid #1c1c1c8a;
+  }
+
+  th, td {
+    padding: 10px 20px;
+    border-left: 2px solid #1c1c1c8a;
+  }
+
+  button {
+    max-width: 7.5em;
+    border: none;
+    padding: 0.6em 1.4em;
+    border-radius: 8px;
+    border: none;
+    background-color: #1373a9;
+    color: white;
+  }
+
+  .btn-column {
+    width: 8em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+

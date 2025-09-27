@@ -1,10 +1,24 @@
-<h2>Employee List</h2>
-<ul>
-  @for (item of employees(); track $index) {
-    @if (item.activate) {
-      <li>
-        {{item.id}}. | {{ item.firstName }} {{ item.lastName }} | {{ item.email }}
-      </li>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">...</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of employees(); track $index) {
+      @if (item.activate) {
+        <tr>
+          <th scope="row"> {{item.id}} </th>
+          <td> {{item.firstName}} </td>
+          <td> {{item.lastName}} </td>
+          <td> {{item.email}} </td>
+          <td class="btn-column"> <button (click)="deactivateEmployeeById(item.id)"> Deactivate </button> </td>
+        </tr>
+      }
     }
-  }
-</ul>
+  </tbody>
+</table>
