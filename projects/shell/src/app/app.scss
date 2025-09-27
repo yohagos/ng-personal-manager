@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #1050a9aa;
+  height: 4.5em;
+
+  & .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: auto 2em;
+  }
+}

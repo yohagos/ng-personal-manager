@@ -1,15 +1,9 @@
 import { initFederation } from '@angular-architects/native-federation';
 
-/* initFederation({
-  'mfeEmployeeList': 'http://localhost:4200/remoteEntry.json',
-  'mfeEmployeeAdd': 'http://localhost:4200/remoteEntry.json',
-  'mfeEmployeeDeactivate': 'http://localhost:4200/remoteEntry.json'
+initFederation({
+  'mfe-employee-list': 'http://localhost:4201/remoteEntry.json',
+  'mfe-employee-add': 'http://localhost:4202/remoteEntry.json',
+  'mfe-employee-deactivate': 'http://localhost:4203/remoteEntry.json',
 })
-  .catch(err => console.error(err))
-  .then(_ => import('./bootstrap'))
-  .catch(err => console.error(err)); */
-
-  initFederation('/assets/federation.manifest.json')
-  .catch(err => console.error(err))
-  .then(_ => import('./bootstrap'))
-  .catch(err => console.error(err));
+  .then((_) => import('./bootstrap'))
+  .catch((err) => console.error(err));

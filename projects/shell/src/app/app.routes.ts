@@ -11,10 +11,6 @@ export const routes: Routes = [
     loadComponent: () => loadRemoteModule('mfe-employee-add', './Component').then(m => m.App),
   },
   {
-    path: 'deactivate',
-    loadComponent: () => loadRemoteModule('mfe-employee-deactivate', './Component').then(m => m.App),
-  },
-  {
     path: '**',
     redirectTo: 'list',
     pathMatch: 'full'
