@@ -5,7 +5,7 @@
     <input [(ngModel)]="firstName" type="text" name="firstName" placeholder="First Name">
     <input [(ngModel)]="lastName" type="text" name="lastName" placeholder="Last Name">
     <input [(ngModel)]="email" type="email" name="email" placeholder="Email">
-    <button type="submit">Add</button>
+    <button type="submit" [disabled]="!firstName() || !lastName() || !email()">Add</button>
   </form>
 </div>
 
