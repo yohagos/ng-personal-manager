@@ -1,12 +1,16 @@
 <div class="container">
-  <h2>Add Employee</h2>
+  <h2>Details</h2>
 
-  <form #form="ngForm" (ngSubmit)="add(form)">
-    <input [(ngModel)]="firstName" type="text" name="firstName" placeholder="First Name">
-    <input [(ngModel)]="lastName" type="text" name="lastName" placeholder="Last Name">
-    <input [(ngModel)]="email" type="email" name="email" placeholder="Email">
-    <button type="submit" [disabled]="!firstName() || !lastName() || !email()">Add</button>
-  </form>
+  @if (employee()) {
+      <mat-form-field appearance="fill">
+        <mat-label>Full name</mat-label>
+        <input matInput type="text" value="{{employee()?.firstName}} {{employee()?.lastName}}">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" value="{{employee()?.email}}">
+      </mat-form-field>
+  }
 </div>
 
 
