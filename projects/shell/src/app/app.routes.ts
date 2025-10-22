@@ -7,8 +7,8 @@ export const routes: Routes = [
     loadComponent: () => loadRemoteModule('mfe-employee-list', './Component').then(m => m.App),
   },
   {
-    path: 'add',
-    loadComponent: () => loadRemoteModule('mfe-employee-add', './Component').then(m => m.App),
+    path: 'detail',
+    loadComponent: () => loadRemoteModule('mfe-employee-detail', './Component').then(m => m.App),
   },
   {
     path: '**',
