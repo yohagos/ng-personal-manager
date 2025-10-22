@@ -5,3 +5,4 @@
 export * from './lib/shared-lib';
 export * from './lib/employee.model';
 export * from './lib/employee-service';
+export * from './lib/navigation-service';

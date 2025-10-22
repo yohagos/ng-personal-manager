@@ -11,7 +11,6 @@ body {
   padding: 1.5em;
 
   box-shadow: 0px 4px 6px #1c1c1c60;
-  _border: 1.5px solid #1c1c1cb2;
 
   & h2 {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -23,7 +22,7 @@ body {
     align-items: center;
 
     & input {
-      margin: 0.7em;
+      margin: auto 0.7em;
       width: 15em;
       height: 2.4em;
       border: none;

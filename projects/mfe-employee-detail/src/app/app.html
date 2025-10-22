@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Details</h2>
+
+  @if (employee()) {
+      <mat-form-field appearance="fill">
+        <mat-label>Full name</mat-label>
+        <input matInput type="text" value="{{employee()?.firstName}} {{employee()?.lastName}}">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" value="{{employee()?.email}}">
+      </mat-form-field>
+  }
+</div>
+
+

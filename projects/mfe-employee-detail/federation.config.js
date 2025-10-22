@@ -2,10 +2,10 @@ const { withNativeFederation, shareAll } = require('@angular-architects/native-f
 
 module.exports = withNativeFederation({
 
-  name: 'mfe-employee-add',
+  name: 'mfe-employee-detail',
 
   exposes: {
-    './Component': './projects/mfe-employee-add/src/app/app.ts',
+    './Component': './projects/mfe-employee-detail/src/app/app.ts',
   },
 
   shared: {
