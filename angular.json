@@ -258,15 +258,15 @@
 				}
 			}
 		},
-		"mfe-employee-add": {
+		"mfe-employee-detail": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
 					"style": "scss"
 				}
 			},
-			"root": "projects/mfe-employee-add",
-			"sourceRoot": "projects/mfe-employee-add/src",
+			"root": "projects/mfe-employee-detail",
+			"sourceRoot": "projects/mfe-employee-detail/src",
 			"prefix": "app",
 			"architect": {
 				"build": {
@@ -274,10 +274,10 @@
 					"options": {},
 					"configurations": {
 						"production": {
-							"target": "mfe-employee-add:esbuild:production"
+							"target": "mfe-employee-detail:esbuild:production"
 						},
 						"development": {
-							"target": "mfe-employee-add:esbuild:development",
+							"target": "mfe-employee-detail:esbuild:development",
 							"dev": true
 						}
 					},
@@ -286,7 +286,7 @@
 				"serve": {
 					"builder": "@angular-architects/native-federation:build",
 					"options": {
-						"target": "mfe-employee-add:serve-original:development",
+						"target": "mfe-employee-detail:serve-original:development",
 						"rebuildDelay": 0,
 						"dev": true,
 						"port": 4202
@@ -298,33 +298,33 @@
 				"test": {
 					"builder": "@angular/build:karma",
 					"options": {
-						"tsConfig": "projects/mfe-employee-add/tsconfig.spec.json",
+						"tsConfig": "projects/mfe-employee-detail/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
 							{
 								"glob": "**/*",
-								"input": "projects/mfe-employee-add/public"
+								"input": "projects/mfe-employee-detail/public"
 							}
 						],
 						"styles": [
-							"projects/mfe-employee-add/src/styles.scss"
+							"projects/mfe-employee-detail/src/styles.scss"
 						]
 					}
 				},
 				"esbuild": {
 					"builder": "@angular/build:application",
 					"options": {
-						"browser": "projects/mfe-employee-add/src/main.ts",
-						"tsConfig": "projects/mfe-employee-add/tsconfig.app.json",
+						"browser": "projects/mfe-employee-detail/src/main.ts",
+						"tsConfig": "projects/mfe-employee-detail/tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
 							{
 								"glob": "**/*",
-								"input": "projects/mfe-employee-add/public"
+								"input": "projects/mfe-employee-detail/public"
 							}
 						],
 						"styles": [
-							"projects/mfe-employee-add/src/styles.scss"
+							"projects/mfe-employee-detail/src/styles.scss"
 						],
 						"polyfills": [
 							"es-module-shims"
@@ -358,10 +358,10 @@
 					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "mfe-employee-add:esbuild:production"
+							"buildTarget": "mfe-employee-detail:esbuild:production"
 						},
 						"development": {
-							"buildTarget": "mfe-employee-add:esbuild:development"
+							"buildTarget": "mfe-employee-detail:esbuild:development"
 						}
 					},
 					"defaultConfiguration": "development",
