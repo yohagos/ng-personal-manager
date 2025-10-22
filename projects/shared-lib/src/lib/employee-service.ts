@@ -64,4 +64,10 @@ export class EmployeeService {
       current.map(e => (e.id === id ? {...e, activate: false} : e))
     )
   }
+
+  getEmployeeById(
+    id: number
+  ) {
+    return this.employees().find(emp => emp.id === id)
+  }
 }
